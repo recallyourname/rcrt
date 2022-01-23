@@ -1,18 +1,21 @@
 import React from "react";
-import NavigationPage from "./components/pages/Navigation/NavigationPage";
+import NavigationSidebar from "./components/pages/Navigation/NavigationSidebar";
+import CandidatesPage from "./components/pages/CandidatesPage";
+import Content from "./components/pages/Content";
 
 function App() {
   return (
     <div className="App">
-      <NavigationPage
+      <NavigationSidebar
         menuElements={[
-          { title: "Candidates", emoji: "🧑‍💻" },
-          { title: "Flow", emoji: "📈" },
-          {title: "Positions", emoji: "💼"},
-          {title: "Schedule", emoji: "📅"},
-          {title: "Reports", emoji: "📝"}
+          { title: "Candidates", emoji: "🧑‍💻", current: true },
+          { title: "Flow", emoji: "📈", current: false },
+          { title: "Positions", emoji: "💼", current: false },
+          { title: "Schedule", emoji: "📅", current: false },
+          { title: "Reports", emoji: "📝", current: false },
         ]}
       />
+      <Content childComponent={<CandidatesPage />} />
     </div>
   );
 }

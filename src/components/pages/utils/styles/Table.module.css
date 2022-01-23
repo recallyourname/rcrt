@@ -1,0 +1,19 @@
+.headerContainer {
+    background-color: #ebeced;
+    display: flex;
+    flex-direction: row;
+}
+
+.tableHeader {
+    width: 33%;
+    display: flex;
+    text-align: center;
+}
+
+.technicalSkill {
+    display: flex;
+    width: 100px;
+    background-color: rgb(163, 163, 163);
+    padding: 0.1rem;
+    margin: 0.1rem;
+}

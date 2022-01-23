@@ -1,18 +1,23 @@
 import React from "react";
-import { FC } from "react";
+import { FC, useState } from "react";
 import NavigationElement from "./NavigationElement";
-import style from "./style/NavigationPage.module.css";
+import style from "./style/NavigationSidebar.module.css";
 
 interface IProps {
   menuElements: {
     title: string;
     emoji: string;
+    current?: boolean;
   }[];
 }
 
-const NavigationPage: FC<IProps> = (props) => {
+const NavigationSidebar: FC<IProps> = (props) => {
   const menuElements = props.menuElements.map((item) => (
-    <NavigationElement emoji={item.emoji} navigationElementTitle={item.title} />
+    <NavigationElement
+      emoji={item.emoji}
+      navigationElementTitle={item.title}
+      current={item.current}
+    />
   ));
 
   return (
@@ -24,4 +29,4 @@ const NavigationPage: FC<IProps> = (props) => {
   );
 };
 
-export default NavigationPage;
+export default NavigationSidebar;
