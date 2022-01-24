@@ -13,6 +13,7 @@ function App() {
           { title: "Positions", emoji: "💼", current: false },
           { title: "Schedule", emoji: "📅", current: false },
           { title: "Reports", emoji: "📝", current: false },
+          { title: "Chapo", emoji: "📝", current: false },
         ]}
       />
       <Content childComponent={<CandidatesPage />} />
