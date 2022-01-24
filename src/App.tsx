@@ -1,24 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import NavigationSidebar from "./components/pages/Navigation/NavigationSidebar";
+import CandidatesPage from "./components/pages/CandidatesPage";
+import Content from "./components/pages/Content";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavigationSidebar
+        menuElements={[
+          { title: "Candidates", emoji: "🧑‍💻", current: true },
+          { title: "Flow", emoji: "📈", current: false },
+          { title: "Positions", emoji: "💼", current: false },
+          { title: "Schedule", emoji: "📅", current: false },
+          { title: "Reports", emoji: "📝", current: false },
+          { title: "Chapo", emoji: "📝", current: false },
+        ]}
+      />
+      <Content childComponent={<CandidatesPage />} />
     </div>
   );
 }
