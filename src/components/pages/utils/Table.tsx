@@ -10,7 +10,7 @@ interface IProps {
 
 const Table: FC<IProps> = (props) => {
   const headers = props.tableHeaders.map((header) => (
-    <div className={style.tableHeader}>{header.title}</div>
+    <div className={style.tableHeader} style={{width: 100/props.tableHeaders.length+"%"}}> {header.title}</div>
   ));
 
   return (

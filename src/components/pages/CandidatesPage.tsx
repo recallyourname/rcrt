@@ -7,7 +7,14 @@ interface IProps {}
 const CandidatesPage: FC<IProps> = (props) => {
   return (
     <div>
-      <Table tableHeaders={[{ title: "Candidate" }, { title: "Date" }, {title: "Technology"}]} />
+      <Table
+        tableHeaders={[
+          { title: "Candidate" },
+          { title: "Date" },
+          { title: "Technology" },
+          { title: "Data" },
+        ]}
+      />
     </div>
   );
 };
