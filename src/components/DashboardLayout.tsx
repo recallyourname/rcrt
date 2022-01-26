@@ -12,11 +12,11 @@ const DashboardLayout: FC<IProps> = (props) => {
     <div>
       <NavigationSidebar
         menuElements={[
-          { title: "Candidates", emoji: "🧑‍💻", current: true },
-          { title: "Flow", emoji: "📈", current: false },
-          { title: "Positions", emoji: "💼", current: false },
-          { title: "Schedule", emoji: "📅", current: false },
-          { title: "Reports", emoji: "📝", current: false },
+          { title: "Candidates", path: "/candidates", emoji: "🧑‍💻", current: true },
+          { title: "Flow", path: "/flow",  emoji: "📈", current: false },
+          { title: "Positions", path: "/positions", emoji: "💼", current: false },
+          { title: "Schedule", path: "/schedule", emoji: "📅", current: false },
+          { title: "Reports", path: "/reports", emoji: "📝", current: false },
         ]}
       />
       <Content childComponent={props.children} />
