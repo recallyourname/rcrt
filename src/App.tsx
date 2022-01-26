@@ -1,24 +1,24 @@
 import React from "react";
+import { useRoutes, BrowserRouter, Navigate } from "react-router-dom";
 import NavigationSidebar from "./components/pages/Navigation/NavigationSidebar";
-import CandidatesPage from "./components/pages/CandidatesPage";
 import Content from "./components/pages/Content";
+import CandidatesPage from "./components/pages/CandidatesPage";
+import DashboardLayout from "./components/DashboardLayout"
 
 function App() {
-  return (
-    <div className="App">
-      <NavigationSidebar
-        menuElements={[
-          { title: "Candidates", emoji: "🧑‍💻", current: true },
-          { title: "Flow", emoji: "📈", current: false },
-          { title: "Positions", emoji: "💼", current: false },
-          { title: "Schedule", emoji: "📅", current: false },
-          { title: "Reports", emoji: "📝", current: false },
-          { title: "Chapo", emoji: "📝", current: false },
-        ]}
-      />
-      <Content childComponent={<CandidatesPage />} />
-    </div>
-  );
+  let routes = useRoutes([
+    { path: "/", element: <DashboardLayout /> },
+    {
+      path: "/",
+      element: <CandidatesPage />,
+      children: [
+        { path: "/", element: <Navigate to="/candidates" /> },
+        { path: "candidates", element: <CandidatesPage /> },
+      ],
+    },
+  ])
+
+  return routes;
 }
 
 export default App;

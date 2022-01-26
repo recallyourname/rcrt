@@ -1,12 +1,13 @@
 import React from "react";
 import { FC } from "react";
 import Table from "./utils/Table";
+import DashboardLayout from "../DashboardLayout"
 
 interface IProps {}
 
 const CandidatesPage: FC<IProps> = (props) => {
   return (
-    <div>
+    <DashboardLayout>
       <Table
         tableHeaders={[
           { title: "Candidate" },
@@ -15,7 +16,7 @@ const CandidatesPage: FC<IProps> = (props) => {
           { title: "Data" },
         ]}
       />
-    </div>
+    </DashboardLayout>
   );
 };
 
