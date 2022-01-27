@@ -7,7 +7,6 @@ interface IProps {}
 
 const CandidatesPage: FC<IProps> = (props) => {
   return (
-    <DashboardLayout>
       <Table
         tableHeaders={[
           { title: "Candidate" },
@@ -16,7 +15,6 @@ const CandidatesPage: FC<IProps> = (props) => {
           { title: "Data" },
         ]}
       />
-    </DashboardLayout>
   );
 };
 

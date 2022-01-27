@@ -9,7 +9,7 @@ import FlowPage from "./pages/FlowPage";
 const routes = [
   {
     path: "/",
-    element: <CandidatesPage />,
+    element: <DashboardLayout />,
     children: [
       { path: "/", element: <Navigate to="/candidates" />, exact: true},
       { path: "candidates", element: <CandidatesPage /> },
