@@ -1,24 +1,11 @@
 import React from "react";
-import { useRoutes, BrowserRouter, Navigate } from "react-router-dom";
-import NavigationSidebar from "./components/pages/Navigation/NavigationSidebar";
-import Content from "./components/pages/Content";
-import CandidatesPage from "./components/pages/CandidatesPage";
-import DashboardLayout from "./components/DashboardLayout"
+import { useRoutes } from "react-router-dom";
+import routes from "./components/routes"
 
 function App() {
-  let routes = useRoutes([
-    { path: "/", element: <DashboardLayout /> },
-    {
-      path: "/",
-      element: <CandidatesPage />,
-      children: [
-        { path: "/", element: <Navigate to="/candidates" /> },
-        { path: "candidates", element: <CandidatesPage /> },
-      ],
-    },
-  ])
+  let routing = useRoutes(routes)
 
-  return routes;
+  return routing;
 }
 
 export default App;

@@ -1,7 +1,7 @@
 import React from "react";
 import { FC } from "react";
 import Table from "./utils/Table";
-import DashboardLayout from "../DashboardLayout"
+import DashboardLayout from "./DashboardLayout"
 
 interface IProps {}
 
