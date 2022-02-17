@@ -1,5 +1,6 @@
 import React, { FC } from "react";
-import style from "./style/TableRow.module.css";
+import Bubble from "./Bubble";
+import style from "./style/TableCellTechnology.module.css";
 
 interface IProps {
 	technology: string[];
@@ -7,7 +8,9 @@ interface IProps {
 }
 
 const TableCellTechnology: FC<IProps> = (props) => {
-  return <div style={{width: props.width}}>{props.technology}</div>;
+	const technologies = props.technology.map((technology) => <Bubble technology={technology} />)
+
+  return <div className={style.container} style={{width: props.width}}>{technologies}</div>;
 };
 
 export default TableCellTechnology;

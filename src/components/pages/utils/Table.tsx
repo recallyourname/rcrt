@@ -25,7 +25,7 @@ const Table: FC<IProps> = (props) => {
   ));
 
   const rows = props.tableData.map((row) => (
-    <TableRow data={row} cellWidth={column_width}/>
+    <TableRow data={row} cell_width={column_width}/>
   ))
 
   return (

@@ -10,17 +10,17 @@ interface IProps {
     date: string;
     technology: string[];
   };
-  cellWidth: string;
+  cell_width: string;
 }
 
 const TableRow: FC<IProps> = (props) => {
   return (
     <div className={style.rowContainer}>
-      <TableCellName name={props.data.candidate_name} width={props.cellWidth} />
-      <TableCellDate date={props.data.date} width={props.cellWidth} />
+      <TableCellName name={props.data.candidate_name} width={props.cell_width} />
+      <TableCellDate date={props.data.date} width={props.cell_width} />
       <TableCellTechnology
         technology={props.data.technology}
-        width={props.cellWidth}
+        width={props.cell_width}
       />
     </div>
   );
