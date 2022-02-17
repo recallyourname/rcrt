@@ -1,0 +1,8 @@
+.bubbleCointaner {
+    width: fit-content;
+    padding: 0.15rem;
+    margin: 0.08rem;
+    background-color: rgb(203, 247, 203);
+    border-radius: 0.33rem;
+    font-size: 14px;
+}
