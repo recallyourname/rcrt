@@ -1,0 +1,15 @@
+.listElement {
+	width: 100%;
+	box-sizing: content-box;
+	cursor: pointer;
+}
+
+.listElement:hover {
+	background-color: #b9b8b5;
+}
+
+.emoji {
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+

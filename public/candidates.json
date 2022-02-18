@@ -1,0 +1,24 @@
+[
+    {
+        "name" : "Yuri Panarin",
+        "date" : "08-09-2021",
+        "technology" : [
+            "React",
+            "Angular",
+            "Node.js",
+            "Swift"
+        ],
+        "data" : "some data"
+    },
+    {
+        "name" : "Dmitry Panarin",
+        "date" : "08-10-2021",
+        "technology" : [
+            "Kotlin",
+            "Android",
+            "Node.js",
+            "Swift"
+        ],
+        "data" : "some data"
+    }
+]
