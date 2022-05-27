@@ -5,6 +5,7 @@ import PositionsPage from "./pages/PositionsPage";
 import SchedulePage from "./pages/SchedulePage";
 import ReportsPage from "./pages/ReportsPage";
 import FlowPage from "./pages/FlowPage";
+import Form from "../CVBuilder/pages/Form"
 
 const routes = [
   {
@@ -17,6 +18,7 @@ const routes = [
       { path: "positions", element: <PositionsPage /> },
       { path: "schedule", element: <SchedulePage /> },
       { path: "reports", element: <ReportsPage /> },
+      { path: "cv", element: <Form /> },
     ],
   },
 ];

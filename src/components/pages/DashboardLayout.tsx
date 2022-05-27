@@ -14,25 +14,26 @@ const DashboardLayout: FC<IProps> = (props) => {
         <NavigationSidebar
           menuElements={[
             {
-              title: "Candidates",
+              title: "Кандидаты",
               path: "/candidates",
               emoji: "🧑‍💻",
               current: true,
             },
-            { title: "Flow", path: "/flow", emoji: "📈", current: false },
+            { title: "Рабочий процесс", path: "/flow", emoji: "📈", current: false },
             {
-              title: "Positions",
+              title: "Вакансии",
               path: "/positions",
               emoji: "💼",
               current: false,
             },
             {
-              title: "Schedule",
+              title: "Расписание",
               path: "/schedule",
               emoji: "📅",
               current: false,
             },
-            { title: "Reports", path: "/reports", emoji: "📝", current: false },
+            { title: "Отчеты", path: "/reports", emoji: "📝", current: false },
+            { title: "Резюме", path: "/cv", emoji: "👤", current: false },
           ]}
         />
       </div>
