@@ -5,14 +5,16 @@ import PositionsPage from "./pages/PositionsPage";
 import SchedulePage from "./pages/SchedulePage";
 import ReportsPage from "./pages/ReportsPage";
 import FlowPage from "./pages/FlowPage";
-import Form from "../CVBuilder/pages/Form"
+import Form from "../CVBuilder/pages/Form";
+import ConsolePage from "../components/pages/ConsolePage";
 
 const routes = [
   {
     path: "/",
     element: <DashboardLayout />,
     children: [
-      { path: "/", element: <Navigate to="/candidates" />, exact: true},
+      { path: "/", element: <Navigate to="/dashboard" />, exact: true},
+      { path: "dashboard", element: <ConsolePage />},
       { path: "candidates", element: <CandidatesPage /> },
       { path: "flow", element: <FlowPage /> },
       { path: "positions", element: <PositionsPage /> },

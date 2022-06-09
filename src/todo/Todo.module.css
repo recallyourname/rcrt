@@ -1,0 +1,19 @@
+.container {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.taskContainer {
+    box-shadow: 2px 2px 12px #dadada, -1px -1px 12px #ffffff !important;
+    height: 55vh;
+    overflow: scroll;
+}
+
+.inputContainer {
+    align-self: flex-start;
+    display: flex;
+    padding: 1rem;
+    flex-direction: row;
+    gap: 1rem;
+}

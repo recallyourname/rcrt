@@ -1,0 +1,22 @@
+.uppercontainer {
+    display:flex;
+    flex-direction: row;
+}
+
+.todocontainer {
+    width: 60vw;
+    height: 80vh;
+    display: flex;
+    justify-self: column;
+}
+
+.calendarcontainer {
+    width: 40vw;
+    height: 80vh;
+
+}
+
+.buttonscontainer {
+    width: 85vw;
+    height: 20vh;
+}

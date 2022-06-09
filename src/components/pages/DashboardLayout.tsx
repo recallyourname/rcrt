@@ -14,6 +14,12 @@ const DashboardLayout: FC<IProps> = (props) => {
         <NavigationSidebar
           menuElements={[
             {
+              title: "Дэшборд",
+              path: "/dashboard",
+              emoji: "⚙️",
+              current: false,
+            },
+            {
               title: "Кандидаты",
               path: "/candidates",
               emoji: "🧑‍💻",
@@ -27,7 +33,7 @@ const DashboardLayout: FC<IProps> = (props) => {
               current: false,
             },
             {
-              title: "Расписание",
+              title: "Календарь",
               path: "/schedule",
               emoji: "📅",
               current: false,
