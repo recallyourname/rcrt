@@ -21,13 +21,9 @@ const Todo: FC<IProps> = (props) => {
 
   const handleRemove = (index: number): void => {
     setTimeout(() => {
-      console.log(index);
       const tempTasks = [...tasksList];
-      console.log(tempTasks);
       tempTasks.splice(index, 1);
-      console.log(tempTasks);
       setTasksList(tempTasks);
-      console.log(tasksList);
     }, 300);
   };
 
@@ -37,12 +33,11 @@ const Todo: FC<IProps> = (props) => {
       <div className={style.taskContainer}>
         <ul>
           {tasksList.map((task, index) => (
-            <div>
+            <div key={task}>
               <TodoElement
                 removeCallback={handleRemove}
                 todoTitle={task}
                 index={index}
-                key={index}
               />
             </div>
           ))}

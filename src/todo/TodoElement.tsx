@@ -6,13 +6,12 @@ import { Checkbox, FormControlLabel } from "@mui/material";
 interface IProps {
   todoTitle: string;
   index: number;
-  key: number;
   removeCallback: (key: number) => void;
 }
 
 const TodoElement: FC<IProps> = (props) => {
   return (
-    <li key={props.key}>
+    <li>
       <div className={style.todoContainer}>
         <FormControlLabel
           control={
