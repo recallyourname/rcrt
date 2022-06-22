@@ -1,13 +1,15 @@
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
-import React from "react";
+import React, { useEffect } from "react";
 import { FC, useState, useRef, createRef } from "react";
 import style from "./Todo.module.css";
 import TodoElement from "./TodoElement";
+import { observer } from "mobx-react-lite"
+import TodoList from "../models/TodoList"
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import 'react-tabs/style/react-tabs.css';
 
-interface IProps {}
-
-const Todo: FC<IProps> = (props) => {
+const Todo: FC = () => {
   const [tasksList, setTasksList] = useState<string[]>([]);
   const [task, setTask] = useState("");
   const [inputEmpty, setInputEmpty] = useState(true);
@@ -29,6 +31,12 @@ const Todo: FC<IProps> = (props) => {
 
   return (
     <div className={style.container}>
+      <Tabs>
+        <TabList>
+          <Tab>Текущие задачи</Tab>
+          <Tab>Выполненные задачи</Tab>
+        </TabList>
+      </Tabs>
       <h1>Список задач</h1>
       <div className={style.taskContainer}>
         <ul>
@@ -64,3 +72,5 @@ const Todo: FC<IProps> = (props) => {
 };
 
 export default Todo;
+
+

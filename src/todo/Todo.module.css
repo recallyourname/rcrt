@@ -7,7 +7,6 @@
 .taskContainer {
     box-shadow: 2px 2px 12px #dadada, -1px -1px 12px #ffffff !important;
     height: 55vh;
-    overflow: scroll;
 }
 
 .inputContainer {
